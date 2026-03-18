@@ -76,7 +76,7 @@ function Home() {
     <section className="home-page">
       <div className="page-heading">
         <h2>Book Search</h2>
-        <p>Search Open Library titles and explore book details.</p>
+        <p>Search books, browse results, and open detailed views with a focus on performance.</p>
       </div>
 
       <div className="search-bar">
@@ -88,7 +88,7 @@ function Home() {
           type="text"
           value={search}
           onChange={handleSearchChange}
-          placeholder="Try Harry Potter, JavaScript, Design..."
+          placeholder="Search for books, authors, or topics..."
         />
       </div>
 

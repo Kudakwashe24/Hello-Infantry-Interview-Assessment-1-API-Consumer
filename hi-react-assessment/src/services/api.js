@@ -9,6 +9,7 @@ function buildCoverUrl(coverId) {
   return `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`;
 }
 
+// Normalise API data here so components can stay simple
 function mapSearchResult(book) {
   return {
     id: book.key?.replace('/works/', '') || '',

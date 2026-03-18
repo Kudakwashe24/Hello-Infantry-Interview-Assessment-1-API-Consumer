@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Open Library Explorer</h1>
+        <h1>Open Library Book Explorer</h1>
         <nav>
           <Link to="/">Home</Link>
         </nav>
