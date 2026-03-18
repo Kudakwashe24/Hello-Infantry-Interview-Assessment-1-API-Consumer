@@ -1,22 +1,21 @@
 import { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 
-// TODO: Use React.lazy() to code-split your page components
-// Example: const Home = lazy(() => import('./pages/Home'));
-import Home from './pages/Home';
-import Detail from './pages/Detail';
+const Home = lazy(() => import('./pages/Home'));
+const Detail = lazy(() => import('./pages/Detail'));
 
 function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>HI Assessment</h1>
-        {/* TODO: Add navigation links */}
+        <h1>Open Library Explorer</h1>
+        <nav>
+          <Link to="/">Home</Link>
+        </nav>
       </header>
 
       <main>
-        {/* Suspense boundary is provided — use it with lazy-loaded routes */}
-        <Suspense fallback={<div className="loading">Loading...</div>}>
+        <Suspense fallback={<div className="loading">Loading page...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/detail/:id" element={<Detail />} />
